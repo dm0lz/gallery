@@ -1,0 +1,42 @@
+<div class="gallerie">
+
+    <div class="nav">
+        <%= link_to 'Edit', edit_album_path(@album), :class => 'button secondary' %> 
+        <%= link_to 'Back', albums_path, :class => 'button secondary' %>
+    </div>
+
+    <%= form_for([@album, @album.pictures.new]) do |f| %>
+        <!--<p>
+            <%= f.label :name %><br />
+            <%= f.text_field :name %>
+        </p>-->
+        <%= f.file_field :image, multiple: true, :class => 'button' %>
+    <% end %>
+
+    <div class="container">
+        <ul class="large-block-grid-5" id="pictures">
+            <% @album.pictures.each do |picture| %>
+                <% unless picture.new_record? %>
+                    <li>
+                        <p><%= picture.name %></p><%#= binding.pry %>
+                        <p><%= link_to(image_tag(picture.image_url(:standard)), picture.image_url(:large), :class => "th radius", :rel => "prettyPhoto[gallery]" ) %></p>
+                        <p><%= link_to 'Destroy', album_picture_path(@album, picture), method: :delete, data: { confirm: 'Are you sure?' }, :class => "button" %></p>
+                    </li>
+                <% end %>
+            <% end %>
+        </ul>
+    </div>
+
+    <script id="template-upload" type="text/x-tmpl">
+        <div class="upload">
+            {%=o.name%}
+            <div class="progress large-12 success round"><div class="meter" style="width: 0%"></div></div>
+        </div>
+    </script>
+
+
+
+
+</div>
+
+

@@ -1,0 +1,5 @@
+<li>
+	<p><%= picture.name %></p>
+    <p><%= link_to(image_tag(picture.image_url(:standard)), picture.image_url(:large), :class => "th radius", :rel => "prettyPhoto[gallery]" ) %></p>
+	<p><%= link_to 'Destroy', album_picture_path(@album, picture), method: :delete, data: { confirm: 'Are you sure?' } %></p>
+</li>

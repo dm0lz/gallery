@@ -1,0 +1,35 @@
+// Place all the styles related to the Albums controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+div.gallerie{
+	div.nav{
+		position: absolute;
+		top: 10px;
+		left: 10px;
+	}
+	div.albumthumb{
+		img{
+			//position: absolute;
+			//top: 10px;
+			//left: 10px;
+		}
+	}
+	div.albumtitle{
+
+	}
+}
+
+section.index{
+	h1{
+		color: $bleu;
+	}
+}
+
+ul#pictures{
+	li{
+		p{
+			text-align: center;
+
+		}
+	}
+}

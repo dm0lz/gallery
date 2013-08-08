@@ -1,0 +1,25 @@
+$bleu: #2ba6cb;
+
+
+
+div#user_nav{
+	a{
+		float: right;
+		margin-right: 10px;
+		margin-top: 10px;
+	}
+	span.loggedin{
+		float: right;
+		margin-right: 10px;
+		margin-top: 20px;
+	}
+}
+
+.container{
+	padding: 20px;
+}
+
+.notice{
+	position: relative;
+	top: 10px;
+}
