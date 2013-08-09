@@ -1,4 +1,11 @@
 GIT
+  remote: git://github.com/FriendlyId/friendly_id.git
+  revision: be499130094316d36cb4761e532b11c68d24f17b
+  branch: master
+  specs:
+    friendly_id (5.0.0.alpha.1)
+
+GIT
   remote: git://github.com/milgner/compass-rails.git
   revision: c86e7fd9c2605c80816a2f64a3fb8b7c3a09e494
   branch: rails4
@@ -278,6 +285,7 @@ DEPENDENCIES
   devise
   email_spec
   factory_girl_rails
+  friendly_id!
   guard-cucumber
   guard-rspec
   guard-spork
