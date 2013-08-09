@@ -8,9 +8,9 @@ load "config/recipes/puma"
 load "config/recipes/mysql"
 load "config/recipes/rvm"
 
-server "rubydev.fr", :web, :app, :db, :primary => true
+server "galleryphoto.mooo.com", :web, :app, :db, :primary => true
 
-set :site_url, "rubydev.fr"
+set :site_url, "galleryphoto.mooo.com"
 
 set :application, "gallery"
 set :user, "olivierdoe"
