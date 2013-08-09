@@ -6,9 +6,9 @@ class PicturesController < ApplicationController
 	end
 
 	def create
-		#binding.pry
 		params[:picture][:user_id] = current_user.id
 		@picture = set_album.pictures.new(picture_params)
+		#binding.pry
 
 		respond_to do |format|
 			if @picture.save
@@ -34,7 +34,7 @@ class PicturesController < ApplicationController
 	private
 	# Use callbacks to share common setup or constraints between actions.
 	def set_album
-	  @album = Album.find(params.require(:album_id))
+	  @album = Album.friendly.find(params.require(:album_id))
 	end
 
 	# Never trust parameters from the scary internet, only allow the white list through.
