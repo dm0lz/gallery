@@ -29,5 +29,5 @@ ssh_options[:forward_agent] = true
 after "deploy", "deploy:cleanup" # keep only the last 5 releases
 
 
-set :shared_children, shared_children + %w{public/uploads}
+#set :shared_children, shared_children + %w{public/uploads}
 
