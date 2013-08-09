@@ -14,3 +14,8 @@ $ ->
 				data.submit()
 			else
 				alert("#{file.name} is not a gif, jpeg, or png image file")
+		progress: (e, data) ->
+			if data.context
+				progress = parseInt(data.loaded / data.total * 100, 10)
+				data.context.find('.meter').css('width', progress + '%')
+			#paramName: "picture[image]"
